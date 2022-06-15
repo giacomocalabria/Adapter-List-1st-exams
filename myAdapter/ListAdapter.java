@@ -25,24 +25,48 @@ public class ListAdapter implements HList, HCollection {
 
     // Query Operations
 
+    /**
+     * Ritorna il numero degli elementi della lista.
+     * Se la lista contiene più di n° Integer.MAX_VALUE elementi, il metodo 
+     * ritorna automaticamente il numero Integer.MAX_VALUE
+     * 
+     * @return Il numero degli elementi della lista.
+     */
+
     @Override
     public int size(){
+        //Semplicemente chiamo il metodo della classe Vector che 
+        //indica quanti elementi sono presenti nel Vector. Tale numero
+        //corrisponde al numero degli elementi della lista
         return list.size();
     }
-
+    /**
+     * Ritorna vero se la lista non contiene elementi.
+     * 
+     * @return vero se la lista non contiene elementi
+     */
     @Override
     public boolean isEmpty(){
+        //Semplicemente chiamo il metodo della classe Vector che
+        //indica se il Vector è vuoto.
         return list.isEmpty();
     }
-
+    /**
+     * Ritorna vero se la lista contiene l'elemento specificato.
+     * 
+     * @param obj è l'emento che deve essere trovato nella lista
+     * @return true se la lista contiene l'elemento specificato
+     */
     @Override
     public boolean contains(Object obj){
+        //Riutilizzo il metodo della classe Vector per sapere se 
+        //la collezione contiene l'elemento obj
         return list.contains(obj);
     }
 
     @Override
     public HIterator iterator(){
-        return null;
+        return listIterator();
     }
 
     @Override
@@ -57,6 +81,12 @@ public class ListAdapter implements HList, HCollection {
 
     // Modification Operations
 
+    /**
+     * Aggiunge l'elemento specificato alla fine della lista
+     * 
+     * @param obj l'elemento da aggiungere alla lista
+     * @return true se l'elemento non è presente nella lista
+     */
     @Override 
     public boolean add(Object obj){
         if(list.contains(obj))
