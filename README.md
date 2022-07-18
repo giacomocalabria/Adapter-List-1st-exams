@@ -2,7 +2,7 @@
 
 Primo appello del corso di Elementi di Ingegneria del Software
 
-Qui di seguito si riporta la consegna del progetto: 
+NOTA BENE: il progetto/esame non è stato completato. Qui di seguito si riporta la consegna del progetto: 
 
 # Appello 1
 
